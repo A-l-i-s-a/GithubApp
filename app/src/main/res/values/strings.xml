@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Github App</string>
+    <string name="author">Author</string>
+    <string name="name">Name</string>
+    <string name="description">Description</string>
+    <string name="programmingLanguage">Programming language</string>
+    <string name="countForks">Count forks</string>
+    <string name="countStars">Count stars</string>
+</resources>

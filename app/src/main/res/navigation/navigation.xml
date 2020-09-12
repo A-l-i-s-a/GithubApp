@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/listRepositoriesFragment">
+
+    <fragment
+        android:id="@+id/listRepositoriesFragment"
+        android:name="com.existentialtypes.githubapp.ui.listRepositories.ListRepositoriesFragment"
+        android:label="list_repositories_fragment"
+        tools:layout="@layout/list_repositories_fragment" >
+        <action
+            android:id="@+id/action_listRepositoriesFragment_to_reposFragment"
+            app:destination="@id/reposFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/reposFragment"
+        android:name="com.existentialtypes.githubapp.ui.repos.ReposFragment"
+        android:label="repos_fragment"
+        tools:layout="@layout/repos_fragment" >
+        <action
+            android:id="@+id/action_reposFragment_to_listRepositoriesFragment"
+            app:destination="@id/listRepositoriesFragment" />
+    </fragment>
+</navigation>
