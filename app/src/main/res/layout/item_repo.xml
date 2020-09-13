@@ -45,12 +45,14 @@
                         android:id="@+id/countForksTextView"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/fork"
                         tools:text="@string/countForks" />
 
                     <TextView
                         android:id="@+id/countStarsTextView"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:drawableLeft="@android:drawable/btn_star_big_on"
                         tools:text="@string/countStars" />
                 </LinearLayout>
 

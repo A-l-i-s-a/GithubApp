@@ -32,8 +32,8 @@ class RepoAdapter(
         fun bind(repo: GithubRepositories) {
             name.text = repo.name
             programmingLanguage.text = repo.language
-            countForks.text = repo.forksUrl
-            countStars.text = repo.stargazersUrl
+            countForks.text = repo.forks.toString()
+            countStars.text = repo.stargazersCount.toString()
             Glide
                 .with(avatars.context)
                 .load(repo.owner?.avatarUrl)

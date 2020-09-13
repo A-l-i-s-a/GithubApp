@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -33,7 +34,10 @@ class ListRepositoriesFragment : Fragment() {
             recyclerView.adapter =
                 RepoAdapter(it, viewModel, object : RepoAdapter.RepoViewHolder.Listener {
                     override fun onItemClick(repo: GithubRepositoriesMinimal) {
-                        findNavController().navigate(R.id.action_listRepositoriesFragment_to_reposFragment)
+                        findNavController().navigate(
+                            R.id.action_listRepositoriesFragment_to_reposFragment,
+                            bundleOf("repo" to repo)
+                        )
                     }
                 })
         })

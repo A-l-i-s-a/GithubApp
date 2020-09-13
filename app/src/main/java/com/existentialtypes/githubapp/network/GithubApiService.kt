@@ -1,6 +1,7 @@
 package com.existentialtypes.githubapp.network
 
 import com.existentialtypes.githubapp.BuildConfig
+import com.existentialtypes.githubapp.network.model.Commits
 import com.existentialtypes.githubapp.network.model.GithubRepositories
 import com.existentialtypes.githubapp.network.model.GithubRepositoriesMinimal
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
@@ -45,6 +46,12 @@ interface GithubApiService {
         @Path("login") login: String,
         @Path("name") name: String
     ): Deferred<GithubRepositories>
+
+    @GET("repos/{login}/{name}/commits?per_page=10")
+    fun getCommits(
+        @Path("login") login: String,
+        @Path("name") name: String
+    ): Deferred<List<Commits>>
 }
 
 object GithubApi {
